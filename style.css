@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #CBDEE6;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: 100vh;
+    min-width: 100px;
+}
+
+
+.horni-obrazky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 9999;
+}
+
+.obrazek1 {
+    padding-left: 10px;
+    position-anchor: auto;
+}
+
+.obrazek3 {
+    width: 160px;
+}
+
+.prostredni-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 125px;
+}
+
+.prostredni-textik {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.c-Text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #194564;
+
+}
+
+.policko {
+    line-height: 50px;
+    position: relative;
+    width: 600px;
+    padding-left: 15px;
+    font-size: large;
+}
+.policko2{
+    line-height: 50px;
+    position: relative;
+    width: 560px;
+    padding-left: 15px;
+    font-size: large;
+}
+
+.velke-tlacitka1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: #B90E49;
+    border: 2px solid #B90E49;
+    border-radius: 25px;
+    padding: 10px;
+    color: #FFFFFF;
+
+    width: 210px;
+
+}
+
+.nebo {
+    display: flex;
+    justify-content: center;
+}
+
+.lajna {
+    display: flex;
+    align-items: center;
+    color: #555;
+    width: 600px;
+
+}
+
+.lajna::before,
+.lajna::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1.5px solid #999;
+}
+
+.lajna::before {
+    margin-right: 12px;
+}
+
+.lajna::after {
+    margin-left: 12px;
+}
+
+.spodni-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 621px;
+    align-items: center;
+}
+
+.velke-tlacitka1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    padding: 12px 0;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.velke-tlacitka2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    padding: 12px 0;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.velke-tlacitka1 {
+    background-color: #B90E49;
+    border: 2px solid #B90E49;
+}
+
+.velke-tlacitka2 {
+    background-color: #194564;
+    border: 2px solid #194564;
+}
+
+.tlacitka {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.something1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+}
+
+.something2 {
+    padding-left: 5px;
+}
+
+.password-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.password-wrapper input {
+    padding-right: 40px; /* místo pro ikonku */
+}
+
+.password-wrapper .eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.bottom-page {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-bottom: 0;
+    background-color: #1B4079;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+}
+
+.bottom-page-text {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.bottom-page-text-columns {
+    padding-left: 100px;
+    padding-top: 15px;
+    color: #FFFFFF;
+}
+
+.bottom-page-text-rows {
+    display: flex;
+    padding-left: 100px;
+    padding-top: 40px;
+    height: 25px;
+    font-size: 22px;
+    color: #ADCCE1;
+    gap: 150px;
+}
+
+.bottom-page-text-columns-mid {
+    padding-left: 100px;
+    padding-top: 10px;
+    color: #FFFFFF;
+    height: auto;
+    font-size: large;
+}
+
+.bottom-page-text-columns-mid-text {
+    padding-bottom: 2px;
+}
+
+.bottom-page-text-mega-rows {
+    display: flex;
+    width: auto;
+    height: 25px;
+    font-size: 22px;
+    padding-top: 15px;
+    color: #ADCCE1;
+}
+
+.bottom-page-text-columns-right {
+    padding-left: 100px;
+    padding-top: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bottom-page-text-right {;
+    padding-left: 22px;
+    font-size: 22px;
+    color: #ADCCE1;
+}
+
+.bottom-page-text-right-phone {
+    color: #1B4079;
+    background-color: white;
+    border-radius: 15px;
+    padding: 26px;
+}
+
+.bottom-page-text-columns-right-phone-number {
+    font-size: 20px;
+}
+
+.bottom-page-text-right-phone-text {
+    padding-left: 20px;
+}
+
+.bottom-page-text-right-under-phone-control {
+    width: 310px;
+}
+
+.bottom-page-text-right-under-phone {
+    color: #ADCCE1;
+}
+
+.color-of-text {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+.button {
+    border-radius: 40px;
+    background: linear-gradient(299deg, #B90E49 3%, #F1680B 18%, #F9AB00 33%, #F9AB00 67%, #F1680B 82%, #B90E49 97%);
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 15px;
+}
+.phone{
+    width: 20px;
+    height: 20px;
+}
+.lock{
+    width: 15px;
+    height: 15px;
+}
+.star{
+    align-self: flex-start;
+    padding-left: 2px;
+    color: #B90E49;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+
+    .horni-obrazky {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .obrazek1 img,
+    .obrazek2 img {
+        width: 120px;
+        height: auto;
+    }
+
+    .obrazek3{
+        width: 0;
+        height: 0;
+    }
+
+
+    .c-Text {
+        width: 100%;
+        align-items: center;
+        text-align: left;
+    }
+
+    .prostredni-text {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 160px;
+        width: 100%;
+    }
+
+    .mid-text-format{
+        align-self: center;
+        display: flex;
+        justify-content: flex-start;
+        width: max(360px);
+    }
+
+    .policko {
+        width: 90%;
+        max-width: 350px;
+        font-size: 16px;
+    }
+
+    .policko2{
+        max-width: 310px;
+        font-size: 16px;
+    }
+
+    .lajna {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .velke-tlacitka1
+     {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .velke-tlacitka2{
+        max-width: 350;
+    }
+
+
+
+    /* FOOTER */
+    .bottom-page {
+        height: auto;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .bottom-page-text {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    .bottom-page-text-rows,
+    .bottom-page-text-columns,
+    .bottom-page-text-columns-mid,
+    .bottom-page-text-columns-right {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .bottom-page-text-columns-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bottom-page-text-right-phone {
+        width: 60%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .bottom-page-text-right-under-phone-control {
+        width: 60%;
+        text-align: left;
+    }
+
+    .button {
+        width: 150px;
+    }
+
+}
+

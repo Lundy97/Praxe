@@ -5,8 +5,10 @@
     <meta content="width=device-width, initial-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link href="stylopis.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link href="https://cloudflare.com" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com"
     <title>Index</title>
 </head>
 <body>
@@ -17,19 +19,33 @@
 </div>
 <div class="prostredni-text">
     <div class="c-Text">
-        <p class="prostredni-textik">Email
-            <span class="star">
+        <div class="mid-text-format">
+            <p class="prostredni-textik">Email
+                <span class="star">
                 *
             </span>
-        </p>
-        <input class="policko" placeholder="Zadejte váš e-mail" required type="text">
-        <p class="prostredni-textik">Heslo
-            <span class="star">*</span>
-        </p>
+            </p>
+        </div>
 
-        <input class="policko" placeholder="Zadejte Váše heslo" required type="text">
+        <input class="policko" placeholder="Zadejte váš e-mail" type="text">
+
+        <div class="mid-text-format">
+            <p class="prostredni-textik">Heslo
+                <span class="star">*</span>
+            </p>
+        </div>
+        <div class="password-wrapper">
+            <input id="password" class="policko2" placeholder="*****" type="password">
+            <span id="toggle" class="eye">
+                <p class="material-icons">visibility</p>
+            </span>
+        </div>
+
+
         <br>
-        <a class="c-Text-zap-heslo" href="heslo.php"> <img alt="lock" class="lock" src="Zdroj/lock.png">Zapomenuté heslo</a>
+        <div class="mid-text-format">
+            <a class="c-Text-zap-heslo" href="heslo.php"> <span class="material-icons">lock</span>Zapomenuté heslo</a>
+        </div>
         <div class="spodni-text"><br>
             <div class="tlacitka">
 
@@ -41,8 +57,7 @@
 
                 <a class="velke-tlacitka2" href="registrace.php">Vytvořit nový účet Moje Amber</a>
                 <div class="something1">
-                    <p>Jste náš stávající dárce a nemůžete se přihlásit?
-                        <a class="something2" href="idk.php">Klikněte zde</a> a nastavte si heslo</p>
+                    <span>Jste náš stávající dárce a nemůžete se přihlásit?<a class="something2" href="idk.php">Klikněte zde</a> a nastavte si heslo</span>
                 </div>
             </div>
         </div>
@@ -104,7 +119,7 @@
                 <span class="bottom-page-text-right">Bezplatná linka</span>
                 <br><br><br>
                 <span class="bottom-page-text-right-phone">
-                    <img alt="phone" class="phone" src="Zdroj/phone.webp">
+                    <span class="material-icons">phone</span>
                     <b class="bottom-page-text-columns-right-phone-number">
                     800 606 806
                     </b>
