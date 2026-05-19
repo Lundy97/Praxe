@@ -1,13 +1,17 @@
 body {
     background-color: #CBDEE6;
-    height: max(1080px);
+    height: auto;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: 100vh;
+    min-width: 100px;
 }
 
 
 .horni-obrazky {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
@@ -22,14 +26,17 @@ body {
     padding-left: 10px;
     position-anchor: auto;
 }
-.obrazek3{
+
+.obrazek3 {
     width: 160px;
 }
+
 .prostredni-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 125px;
+    font-family: "Segoe UI";
 }
 
 .prostredni-textik {
@@ -66,7 +73,7 @@ body {
     color: #FFFFFF;
     font-family: "Segoe UI";
     width: 210px;
-        
+
 }
 
 .nebo {
@@ -97,14 +104,16 @@ body {
     margin-left: 12px;
 }
 
-.spodni-text{
+.spodni-text {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 621px;
     align-items: center;
+    font-family: "Segoe UI";
 }
-.velke-tlacitka1{
+
+.velke-tlacitka1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,47 +160,229 @@ body {
     justify-content: center;
     gap: 18px;
 }
-.something1{
+
+.something1 {
     display: flex;
     flex-direction: column;
     max-width: 340px;
 }
-.something2{
+
+.something2 {
     padding-left: 50px;
 }
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-
-.bottom-page{
+.bottom-page {
     position: relative;
     width: auto;
-    height: 400px;
-    margin: 0;
+    height: auto;
+    padding-bottom: 0;
     background-color: #1B4079;
     border-radius: 25px 25px 0 0;
-}
-.bottom-page-text{
-    padding-top: 35px;
     display: flex;
-    flex-direction: row;
 }
-.bottom-page-text-columns{
+
+.bottom-page-text {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.bottom-page-text-columns {
     padding-left: 100px;
     padding-top: 15px;
     color: #FFFFFF;
-    height: 270px;
-
 }
 
-.bottom-page-text-rows{
+.bottom-page-text-rows {
     display: flex;
     padding-left: 100px;
+    padding-top: 40px;
     height: 25px;
     font-size: 22px;
     color: #ADCCE1;
     gap: 150px;
 }
-.order{
+
+.bottom-page-text-columns-mid {
+    padding-left: 100px;
+    padding-top: 10px;
+    color: #FFFFFF;
+    height: auto;
+    font-size: large;
+}
+
+.bottom-page-text-columns-mid-text {
+    padding-bottom: 2px;
+}
+
+.bottom-page-text-mega-rows {
+    display: flex;
+    width: auto;
+    height: 25px;
+    font-size: 22px;
+    padding-top: 15px;
+    color: #ADCCE1;
+}
+
+.bottom-page-text-columns-right {
+    padding-left: 100px;
+    padding-top: 10px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
+
+.bottom-page-text-right {;
+    padding-left: 22px;
+    font-size: 22px;
+    color: #ADCCE1;
+}
+
+.bottom-page-text-right-phone {
+    color: #1B4079;
+    background-color: white;
+    border-radius: 15px;
+    padding: 26px;
+}
+
+.bottom-page-text-columns-right-phone-number {
+    font-size: 20px;
+}
+
+.bottom-page-text-right-phone-text {
+    padding-left: 20px;
+}
+
+.bottom-page-text-right-under-phone-control {
+    width: 310px;
+}
+
+.bottom-page-text-right-under-phone {
+    color: #ADCCE1;
+}
+
+.color-of-text {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+.button {
+    border-radius: 40px;
+    background: linear-gradient(299deg, #B90E49 3%, #F1680B 18%, #F9AB00 33%, #F9AB00 67%, #F1680B 82%, #B90E49 97%);
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 15px;
+}
+.phone{
+    width: 20px;
+    height: 20px;
+}
+.lock{
+    width: 15px;
+    height: 15px;
+}
+.star{
+    align-self: flex-start;
+    padding-left: 2px;
+    color: #B90E49;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+
+    .horni-obrazky {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .obrazek1 img,
+    .obrazek2 img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Formulář */
+    .prostredni-text {
+        padding-top: 160px;
+        width: 100%;
+    }
+
+    .c-Text {
+        width: 100%;
+        align-items: center;
+        text-align: left;
+    }
+
+    .policko {
+        width: 90%;
+        max-width: 350px;
+        font-size: 16px;
+    }
+
+    .lajna {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .velke-tlacitka1,
+    .velke-tlacitka2 {
+        width: 80%;
+        max-width: 350px;
+    }
+
+
+
+    /* FOOTER */
+    .bottom-page {
+        height: auto;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .bottom-page-text {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    .bottom-page-text-rows,
+    .bottom-page-text-columns,
+    .bottom-page-text-columns-mid,
+    .bottom-page-text-columns-right {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .bottom-page-text-columns-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bottom-page-text-right-phone {
+        width: 60%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .bottom-page-text-right-under-phone-control {
+        width: 60%;
+        text-align: left;
+    }
+
+    .button {
+
+        width: 150px;
+    }
+
+}
+
