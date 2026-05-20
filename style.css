@@ -4,17 +4,18 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #CBDEE6;
     height: auto;
+    width: auto;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: 100vh;
+    justify-content: center;
     min-width: 100px;
 }
 
 
 .horni-obrazky {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     display: flex;
@@ -116,6 +117,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 40px;
     width: 621px;
     align-items: center;
 }
@@ -201,7 +203,7 @@ body {
     position: relative;
     width: auto;
     height: auto;
-    padding-bottom: 0;
+    padding: 0;
     background-color: #1B4079;
     border-radius: 25px 25px 0 0;
     display: flex;
@@ -316,6 +318,15 @@ body {
     padding-left: 2px;
     color: #B90E49;
 }
+.bottom-page-text-columns-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-right: 20px;
+}
+.bottom-right-column-control{
+    padding-right: 20px;
+}
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
@@ -386,12 +397,13 @@ body {
         max-width: 350;
     }
 
+    /*------------------------------------------------------------------------------*/
 
-
-    /* FOOTER */
     .bottom-page {
         height: auto;
         border-radius: 20px 20px 0 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .bottom-page-text {
