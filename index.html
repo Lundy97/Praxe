@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cloudflare.com" rel="stylesheet">
@@ -19,28 +19,27 @@
 </div>
 <div class="prostredni-text">
     <div class="c-Text">
-        <div class="mid-text-format">
-            <p class="prostredni-textik">Email
-                <span class="star">
+        <div class="control-mid-text">
+            <div class="mid-text-format">
+                <p class="prostredni-textik">Email
+                    <span class="star">
                 *
             </span>
-            </p>
-        </div>
-
-        <input class="policko" placeholder="Zadejte váš e-mail" type="text">
-
-        <div class="mid-text-format">
-            <p class="prostredni-textik">Heslo
-                <span class="star">*</span>
-            </p>
-        </div>
-        <div class="password-wrapper">
-            <input id="password" class="policko2" placeholder="*****" type="password">
-            <span id="toggle" class="eye">
+                </p>
+            </div>
+            <input class="policko" placeholder="Zadejte váš e-mail" type="text">
+            <div class="mid-text-format">
+                <p class="prostredni-textik">Heslo
+                    <span class="star">*</span>
+                </p>
+            </div>
+            <div class="password-wrapper">
+                <input class="policko2" id="password" placeholder="*****" type="password">
+                <span class="eye" id="toggle">
                 <p class="material-icons">visibility_off</p>
             </span>
+            </div>
         </div>
-
 
         <br>
         <div class="mid-text-format">
@@ -117,7 +116,8 @@
             <span class="bottom-page-text-mega-rows"></span>
             <div class="bottom-page-text-columns-right">
                 <span class="bottom-page-text-right">Bezplatná linka</span>
-                <br><br><br>
+                <br>
+                <div class="control-wrap-bottom-page-text-right-under-phone">
                 <span class="bottom-page-text-right-phone">
                     <span class="material-icons">phone</span>
                     <b class="bottom-page-text-columns-right-phone-number">
@@ -127,46 +127,41 @@
                     po–pá 7.30-16.00
                  </span>
                 </span>
-                <div class="bottom-page-text-right-under-phone-control">
-                    <br>
-                    <span class="bottom-page-text-right-under-phone">
+                    <div class="bottom-page-text-right-under-phone-control">
+                        <br>
+                        <span class="bottom-page-text-right-under-phone">
                         Pro objednání či přeobjednání termínu, prosím volejte naší zelenou linku.
                         Rezervovat termín si můžete i online na našem <a class="color-of-text" href="rezervace.php">rezervačním portálu</a>
                     </span>
+                    </div>
+
+                    <div class="btn">
+                        <p class="button">
+                            Objednat se
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <p class="button">
-                        Objednat se
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <span class="bottom-page-text-mega-rows"></span>
-            <div class="bottom-page-text-columns-right">
-
-
             </div>
         </div>
     </div>
+</div>
 
 </div>
 <script>
-const password = document.querySelector("#password");
-const toggle = document.querySelector("#toggle");
+    const password = document.querySelector("#password");
+    const toggle = document.querySelector("#toggle");
 
-toggle.addEventListener("click", () => {
-const icon = toggle.querySelector(".material-icons");
+    toggle.addEventListener("click", () => {
+        const icon = toggle.querySelector(".material-icons");
 
-if (password.type === "password") {
-password.type = "text";
-icon.textContent = "visibility";       // otevřené oko
-} else {
-password.type = "password";
-icon.textContent = "visibility_off";   // přeškrtnuté oko
-}
-});
+        if (password.type === "password") {
+            password.type = "text";
+            icon.textContent = "visibility";       // otevřené oko
+        } else {
+            password.type = "password";
+            icon.textContent = "visibility_off";   // přeškrtnuté oko
+        }
+    });
 </script>
 </body>
 </html>
