@@ -59,11 +59,14 @@ body {
 .policko {
     line-height: 50px;
     position: relative;
-    width: 600px;
+    display: flex;
+    max-width: 600px;
     padding-left: 15px;
+    padding-right: 380px;
     font-size: large;
 }
-.policko2{
+
+.policko2 {
     line-height: 50px;
     position: relative;
     width: 560px;
@@ -118,7 +121,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding-bottom: 40px;
-    width: 621px;
+    max-width: 621px;
     align-items: center;
 }
 
@@ -180,7 +183,7 @@ body {
 
 .password-wrapper {
     position: relative;
-    display: inline-block;
+    display: flex;
 }
 
 .password-wrapper input {
@@ -222,7 +225,7 @@ body {
 
 .bottom-page-text-rows {
     display: flex;
-    padding-left:70px;
+    padding-left: 70px;
     padding-top: 10px;
     height: 25px;
     font-size: 22px;
@@ -232,6 +235,7 @@ body {
 
 .bottom-page-text-columns-mid {
     padding-left: 80px;
+    padding-top: 40px;
     color: #FFFFFF;
     height: auto;
     font-size: large;
@@ -267,6 +271,10 @@ body {
     background-color: white;
     border-radius: 15px;
     padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-page-text-columns-right-phone-number {
@@ -277,9 +285,9 @@ body {
     padding-left: 20px;
 }
 
-.bottom-page-text-right-under-phone-control{
+.bottom-page-text-right-under-phone-control {
     padding-top: 20px;
-    width: 310px;
+    max-width: 310px;
 }
 
 .bottom-page-text-right-under-phone {
@@ -301,38 +309,58 @@ body {
     color: white;
     padding: 15px;
 }
-.phone{
+
+.phone {
     width: 20px;
     height: 20px;
 }
-.lock{
+
+.lock {
     width: 15px;
     height: 15px;
 }
-.star{
+
+.star {
     align-self: flex-start;
     padding-left: 2px;
     color: #B90E49;
 }
-.bottom-page-text-columns-wrapper{
+
+.bottom-page-text-columns-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     padding-right: 20px;
 }
-.bottom-right-column-control{
+
+.bottom-right-column-control {
     padding-right: 20px;
+}
+
+.something1-control {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.c-Text-zap-heslo {
+    display: flex;
+    align-items: center;
+}
+
+.phone-text-wrap {
+    display: flex;
+    align-items: center;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
 
-
     .horni-obrazky {
         flex-direction: row;
         justify-content: flex-start;
-        padding: 10px 0;
         gap: 10px;
+        width: 100%;
     }
 
     .obrazek1 img,
@@ -341,7 +369,7 @@ body {
         height: auto;
     }
 
-    .obrazek3{
+    .obrazek3 {
         width: 0;
         height: 0;
     }
@@ -360,22 +388,19 @@ body {
 
     }
 
-    .mid-text-format{
-        align-self: center;
-        display: flex;
-        justify-content: flex-start;
-        max-width: 360px;
-
-    }
-
     .policko {
+        width: 90%;
         max-width: 350px;
         font-size: 16px;
+        padding-right: 0;
+
     }
 
-    .policko2{
+    .policko2 {
+        width: 75%;
         max-width: 310px;
         font-size: 16px;
+        padding-right: 0;
     }
 
     .lajna {
@@ -383,18 +408,16 @@ body {
         max-width: 350px;
     }
 
-    .velke-tlacitka1
-     {
+    .velke-tlacitka1 {
         width: 80%;
         max-width: 350px;
     }
 
-    .velke-tlacitka2{
+    .velke-tlacitka2 {
         max-width: 350;
     }
 
     /*------------------------------------------------------------------------------*/
-
     .bottom-page {
         height: auto;
         border-radius: 20px 20px 0 0;
@@ -405,7 +428,7 @@ body {
     .bottom-page-text {
         display: flex;
         flex-wrap: wrap;
-        gap: 50px;
+        gap: 20px;
         padding: 0 20px;
     }
 
@@ -414,13 +437,15 @@ body {
     .bottom-page-text-columns-right {
         padding-left: 0;
         text-align: left;
+        padding-right: 5px;
     }
 
-    .bottom-page-text-columns-mid
-    {
-        padding-left: 30px;
+    .bottom-page-text-columns-mid {
+        padding-top: 0;
+        padding-left: 0;
         text-align: left;
     }
+
     .bottom-page-text-columns-right {
         display: flex;
         flex-direction: column;
@@ -440,7 +465,27 @@ body {
     .button {
         width: 150px;
     }
-    .control-wrap-bottom-page-text-right-under-phone{
+
+    .btn {
+        padding-right: 70px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .control-mid-text {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+    }
+
+    .mid-text-format {
+        display: flex;
+        justify-content: flex-start;
+        max-width: 360px;
+    }
+
+    .control-wrap-bottom-page-text-right-under-phone {
         max-width: 254px;
         display: flex;
         flex-wrap: wrap;
@@ -448,17 +493,6 @@ body {
         text-align: center;
         align-self: center;
         justify-content: center;
-
     }
-    .btn{
-        padding-right: 70px;
-    }
-    .control-mid-text{
-        display: flex;
-        max-width: 350px;
-        flex-direction: column;
-        align-items: center;
-    }
-
 }
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs">
+<html lang="cs" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -27,7 +27,7 @@
             </span>
                 </p>
             </div>
-            <input class="policko" placeholder="Zadejte váš e-mail" type="text">
+            <input id="email" class="policko" placeholder="Zadejte váš e-mail" type="email">
             <div class="mid-text-format">
                 <p class="prostredni-textik">Heslo
                     <span class="star">*</span>
@@ -40,23 +40,27 @@
             </span>
             </div>
         </div>
-
         <br>
         <div class="mid-text-format">
-            <a class="c-Text-zap-heslo" href="heslo.php"> <span class="material-icons">lock</span>Zapomenuté heslo</a>
+            <a class="c-Text-zap-heslo" href="heslo.php">
+                <span class="lock-wrap">
+                    <span class="material-icons">lock</span>
+                </span>
+                Zapomenuté heslo</a>
         </div>
         <div class="spodni-text"><br>
             <div class="tlacitka">
 
-                <a class="velke-tlacitka1" href="login.php">Přihlásit se</a>
-
+                <a class="velke-tlacitka1"  onclick="verify()" >Přihlásit se</a>
                 <div class="lajna">
                     <span class="nebo">nebo</span>
                 </div>
 
-                <a class="velke-tlacitka2" href="registrace.php">Vytvořit nový účet Moje Amber</a>
-                <div class="something1">
-                    <span>Jste náš stávající dárce a nemůžete se přihlásit?<a class="something2" href="idk.php">Klikněte zde</a> a nastavte si heslo</span>
+                <a class="velke-tlacitka2" >Vytvořit nový účet Moje Amber</a>
+                <div class="something1-control">
+                    <div class="something1">
+                        <span>Jste náš stávající dárce a nemůžete se přihlásit?<a class="something2" href="idk.php">Klikněte zde</a> a nastavte si heslo</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,7 +105,6 @@
                 </div>
             </div>
             <div>
-                <span class="bottom-page-text-rows"></span>
                 <div class="bottom-page-text-columns-mid">
                     <p class="bottom-page-text-columns-mid-text">Litoměřice</p>
                     <p class="bottom-page-text-columns-mid-text">Mladá Boleslav</p>
@@ -119,10 +122,13 @@
                 <br>
                 <div class="control-wrap-bottom-page-text-right-under-phone">
                 <span class="bottom-page-text-right-phone">
-                    <span class="material-icons">phone</span>
+                    <span class="phone-text-wrap">
+                      <span class="material-icons">phone</span>
                     <b class="bottom-page-text-columns-right-phone-number">
                     800 606 806
                     </b>
+                    </span>
+
                  <span class="bottom-page-text-right-phone-text">
                     po–pá 7.30-16.00
                  </span>
@@ -162,6 +168,71 @@
             icon.textContent = "visibility_off";   // přeškrtnuté oko
         }
     });
+</script>
+<script>
+        function verify()
+        {
+            const email = document.getElementById("email").value;
+            const heslo = document.getElementById("password").value;
+
+            if (!email || !heslo)
+            {
+                alert("Vyplňte prosím e-mail i heslo.");
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email))
+            {
+                alert("Zadejte platný e-mail ve formátu neco@domena.cz");
+                return 1;
+            }
+            const popup = window.open("", "Udaje", "width=420,height=350");
+
+            popup.document.write(`
+        <html>
+        <head>
+            <title>Zadané údaje</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    padding: 20px;
+                    text-align: center;
+                }
+                h2 {
+                    color: #194564;
+                }
+                p {
+                    font-size: 18px;
+                }
+                .btn-close {
+                    margin-top: 30px;
+                    padding: 12px 25px;
+                    background-color: #B90E49;
+                    color: white;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+                .btn-close:hover {
+                    background-color: #8c0b3a;
+                }
+            </style>
+        </head>
+        <body>
+            <h2>Zadal jsi:</h2>
+            <p><b>E-mail:</b> ${email}</p>
+            <p><b>Heslo:</b> ${heslo}</p>
+
+            <button class="btn-close" onclick="window.close()">Zavřít</button>
+        </body>
+        </html>
+    `);
+
+            popup.document.close();
+    }
 </script>
 </body>
 </html>
